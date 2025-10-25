@@ -52,5 +52,5 @@ Funciones principales:
 ## 🎮 Cómo ejecutar
 1. Clona este repositorio  
    ```bash
-   git clone https://github.com/tuusuario/simulacion-contagio.git
+   git clone https://github.com/Valentina-sierra1220/-rbol-contagioo.git
    cd simulacion-contagio
