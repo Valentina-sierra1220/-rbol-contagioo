@@ -12,3 +12,6 @@ class Persona:
     def _repr_(self):
         estado = "rojo" if self.infectada else "verde"
         return f"{estado}{self.id}"
+    
+
+    
