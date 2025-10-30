@@ -29,7 +29,7 @@ Representa a cada individuo dentro de la simulación.
 
 **Métodos:**
 - `mover(n)`: Se desplaza aleatoriamente una celda (modo toroide)  
-- `__repr__()`: Muestra su estado con color (🟥 infectado, 🟩 sano)
+- `__repr__()`: Muestra su estado con color (ROJO: infectado, VERDE: sano)
 
 ---
 
