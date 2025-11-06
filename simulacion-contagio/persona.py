@@ -3,7 +3,7 @@ from typing import Optional, List, Tuple
 
 
 class Persona:
-    def _init_(self, id: int, x: int, y: int) -> None:
+    def __init__(self, id: int, x: int, y: int) -> None:
         self.id: int = id
         self.x: int = x
         self.y: int = y
@@ -18,7 +18,7 @@ class Persona:
     def curar(self) -> None:
         self.infectada = False
         self.infectador = None
-        self.defensa = 3
+        self.defensa = 3
 
 
     

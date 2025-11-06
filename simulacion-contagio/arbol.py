@@ -5,7 +5,7 @@ class Node:
         self.valor = valor
         self.hijos: List["Node"] = []
 
-    def __repr__(self) -> str:
+    def ___repr___(self) -> str:
         return f"{self.valor}"
 
 
