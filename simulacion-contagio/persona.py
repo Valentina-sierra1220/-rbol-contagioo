@@ -8,7 +8,7 @@ class Persona:
         self.x: int = x
         self.y: int = y
         self.infectada: bool = False
-        self.defensa: int = 3
+        self.defensa: int = 1
         self.infectador: Optional[int] = None
     
     def infectar(self, id_infectador: int) -> None:
@@ -18,7 +18,7 @@ class Persona:
     def curar(self) -> None:
         self.infectada = False
         self.infectador = None
-        self.defensa = 3
+        self.defensa = 1
 
 
     

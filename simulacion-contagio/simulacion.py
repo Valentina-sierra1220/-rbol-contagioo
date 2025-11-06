@@ -103,32 +103,23 @@ class Simulacion:
     
     def mostrar_matriz(self) -> None:
         matriz = [[" " for _ in range(self.tamano)] for _ in range(self.tamano)]
-        
+
         for p in self.personas:
             if p.infectada:
-                matriz[p.x][p.y] = f"\033[91mp{p.id}\033[0m"
+                matriz[p.x][p.y] = f"\033[91mp{p.id}({p.x},{p.y})\033[0m"
             else:
-                matriz[p.x][p.y] = f"\033[92mp{p.id}\033[0m"
-        
-        print(f"\nRonda {self.ronda}")
-        
-        # Imprimir encabezado de columnas (coordenadas Y)
-        print("    ", end="")  # Espacio para alinear con los números de fila
-        for y in range(self.tamano):
-            print(f"{y:4d}", end="")
-        print()  # Nueva línea después del encabezado
+                matriz[p.x][p.y] = f"\033[92mp{p.id}({p.x},{p.y})\033[0m"
 
-        # Imprimir filas con coordenadas X a la izquierda
-        for x in range(self.tamano):
-            print(f"{x:2d} ", end="")  # Coordenada X con 2 dígitos + espacio
-            for y in range(self.tamano):
-                celda = matriz[x][y]
+        print(f"\nRonda {self.ronda}")
+        for fila in matriz:
+            for celda in fila:
                 if celda == " ":
-                    print("    ", end="")
+                    print("        ", end=" ")  # Espacio ajustado para alinear con coordenadas
                 else:
-                    # Asegurar que cada celda ocupe exactamente 4 caracteres
-                    print(f"{celda:<4s}", end="")
-            print()  # Nueva línea al final de cada fila
+                    print(f"{celda:8s}", end=" ")
+            print()
+
+    
     def mostrar_sanas(self) -> None:
         print("\nSanas:")
         hay_sanas = False
