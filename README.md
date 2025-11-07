@@ -1,4 +1,4 @@
-##🧬 Simulación de Infección con Árbol de Contagio##
+## 🧬 Simulación de Infección con Árbol de Contagio
 
 **📖 Descripción**
 
@@ -42,7 +42,7 @@ Ejemplo de salida del árbol:
 ![Imagen de WhatsApp 2025-11-06 a las 19 17 09_540b39c0](https://github.com/user-attachments/assets/9ee67d87-bbad-4e67-b807-9fab708041dc)
 ---
 
-##🧬 Simulacion
+## 🧬 Simulacion
 Clase principal que controla todo el sistema: movimiento, infección, defensas y rondas.
 
 **Atributos:**
