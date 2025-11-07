@@ -1,4 +1,5 @@
 ###🧬 Simulación de Infección con Árbol de Contagio
+
 **📖 Descripción**
 
 Este proyecto implementa una simulación de contagio dentro de una matriz de tamaño N × N, donde cada persona se mueve aleatoriamente y puede contagiar a otras cuando coinciden en la misma posición.
@@ -78,6 +79,34 @@ Semilla aleatoria (random.seed(...)) para resultados reproducibles
 
 2. **Ejecuta el programa principal**
 python main.py
+
+## Capturas de ejecusión:
+Propagación progresiva
+![Imagen de WhatsApp 2025-11-06 a las 19 12 56_af210f2a](https://github.com/user-attachments/assets/e21199cd-7c74-425e-a471-fe9f32fc4ef8)
+
+Curación y reparenting
+![Imagen de WhatsApp 2025-11-06 a las 19 16 55_c19658e4](https://github.com/user-attachments/assets/24e8ce6a-4eab-4440-9fd5-af01ca80fc7f)
+
+![Imagen de WhatsApp 2025-11-06 a las 19 17 09_a83b7972](https://github.com/user-attachments/assets/2cd71c57-1b18-451a-a4b8-ed7ee14d3a17)
+
+
+Incremento y decremento de defensa
+
+![Imagen de WhatsApp 2025-11-06 a las 19 31 46_bfa09ed1](https://github.com/user-attachments/assets/141a1ab5-c8a5-4d7b-b4ad-43bad1d7b264)
+
+![Imagen de WhatsApp 2025-11-06 a las 19 32 07_9e3b479c](https://github.com/user-attachments/assets/59e6e909-291f-4898-b490-3468f8be6139)
+
+Visualización del arbol por ronda
+![Imagen de WhatsApp 2025-11-06 a las 19 12 56_26f7e2f5](https://github.com/user-attachments/assets/a67181de-66f7-4055-a2a7-51978e188648)
+
+![Imagen de WhatsApp 2025-11-06 a las 19 16 55_9d334da2](https://github.com/user-attachments/assets/dfe21ebd-3863-4648-a521-68811fd0d95c)
+
+
+
+
+
+
+
 
 
 
