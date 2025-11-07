@@ -102,22 +102,42 @@ class Simulacion:
         return True
     
     def mostrar_matriz(self) -> None:
-        matriz = [[" " for _ in range(self.tamano)] for _ in range(self.tamano)]
+    # Crear matriz vacía: cada celda guarda una lista de personas
+        matriz = [[[] for _ in range(self.tamano)] for _ in range(self.tamano)]
 
+        # Colocar a las personas en su posición actual
         for p in self.personas:
-            if p.infectada:
-                matriz[p.x][p.y] = f"\033[91mp{p.id}({p.x},{p.y})\033[0m"
-            else:
-                matriz[p.x][p.y] = f"\033[92mp{p.id}({p.x},{p.y})\033[0m"
+            matriz[p.x][p.y].append(p)
 
-        print(f"\nRonda {self.ronda}")
-        for fila in matriz:
-            for celda in fila:
-                if celda == " ":
-                    print("        ", end=" ")  # Espacio ajustado para alinear con coordenadas
+        print(f"\n Ronda {self.ronda}")
+        print("=" * (self.tamano * 22))
+
+        # Recorrer la matriz e imprimir cada celda con formato
+        for i in range(self.tamano):
+            for j in range(self.tamano):
+                celda = matriz[i][j]
+                coord = f"({i},{j})"
+
+                if not celda:
+                    # Celda vacía
+                    print(f"{coord}: {'-'*8}".ljust(22), end=" ")
                 else:
-                    print(f"{celda:8s}", end=" ")
-            print()
+                    # Mostrar todas las personas en la celda
+                    personas_texto = []
+                    for persona in celda:
+                        if persona.infectada:
+                            # Mostrar quién la infectó (si existe)
+                            if persona.infectador is not None and persona.infectador != 0:
+                                texto = f"\033[91mp{persona.id}(p{persona.infectador})\033[0m"
+                            else:
+                                texto = f"\033[91mp{persona.id}\033[0m"
+                        else:
+                            texto = f"\033[92mp{persona.id}\033[0m"
+                        personas_texto.append(texto)
+
+                    contenido = ",".join(personas_texto)
+                    print(f"{coord}: {contenido}".ljust(22), end=" ")
+            print()  # salto de línea entre filas
 
     
     def mostrar_sanas(self) -> None:
