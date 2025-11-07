@@ -1,4 +1,4 @@
-##🧬 Simulación de Infección con Árbol de Contagio
+##🧬 Simulación de Infección con Árbol de Contagio##
 
 **📖 Descripción**
 
